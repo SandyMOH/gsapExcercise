@@ -8,6 +8,7 @@ import {
   GsapText,
   GsapTimeline,
   GsapTo,
+  Circle,
   Home,
 } from "./pages";
 
@@ -24,6 +25,7 @@ const App = () => {
           <Route path="/gsapscrolltrigger" element={<GsapScrollTrigger />} />
           <Route path="/gsaptext" element={<GsapText />} />
           <Route path="/" element={<Home />} />
+          <Route path="/circle" element={<Circle />} />
         </Routes>
       </Router>
     </div>
