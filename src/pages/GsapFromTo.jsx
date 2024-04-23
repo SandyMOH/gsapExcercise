@@ -1,5 +1,23 @@
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+
+import { animateInCircle } from "../utils/shape";
+
 const GsapFromTo = () => {
-  // TODO: Implement the gsap.fromTo() method
+  useGSAP(() => {
+    gsap.fromTo(
+      "#red-box",
+      { x: 0, y: 0, opacity: 0 },
+      {
+        x: 500,
+        opacity: 1,
+        duration: 3,
+        rotate: 360,
+        repeat: -1,
+        ease: "elastic.out(1, 5)",
+      }
+    );
+  }, []);
 
   return (
     <main>
