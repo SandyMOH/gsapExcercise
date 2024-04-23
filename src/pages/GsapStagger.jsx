@@ -1,5 +1,45 @@
+import React, { useState } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+
 const GsapStagger = () => {
-  // TODO: Implement the gsap.stagger() method
+  const [show, setShow] = useState(false);
+
+  useGSAP(() => {
+    showBox();
+  }, []);
+
+  const showBox = () => {
+    gsap.from(".stagger-box", {
+      duration: 1,
+      y: 100,
+      opacity: 0, // Make sure elements are visible before starting animation
+      stagger: 0.3,
+      ease: "power3.out",
+      onComplete: () => setShow(true), // Update state only after animation completes
+    });
+  };
+
+  const hideBox = () => {
+    gsap.to(".stagger-box", {
+      duration: 1,
+      y: -50,
+      opacity: 0,
+      rotate: 360,
+      stagger: 0.3,
+      ease: "back.in(2)",
+      onComplete: () => setShow(false), // Update state only after animation completes
+    });
+  };
+
+  const onBoxClick = () => {
+    console.log("onBoxClick", show);
+    if (show) {
+      hideBox();
+    } else {
+      showBox();
+    }
+  };
 
   return (
     <main>
@@ -29,6 +69,10 @@ const GsapStagger = () => {
         </a>{" "}
         feature.
       </p>
+
+      <div onClick={onBoxClick}>
+        <button>{show ? "Hide" : "Show"} Box</button>
+      </div>
 
       <div className="mt-20">
         <div className="flex gap-5">
