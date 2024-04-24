@@ -9,6 +9,7 @@ import {
   GsapTimeline,
   GsapTo,
   Circle,
+  StagerManyTest,
   Home,
 } from "./pages";
 
@@ -26,6 +27,7 @@ const App = () => {
           <Route path="/gsaptext" element={<GsapText />} />
           <Route path="/" element={<Home />} />
           <Route path="/circle" element={<Circle />} />
+          <Route path="/staggermanytest" element={<StagerManyTest />} />
         </Routes>
       </Router>
     </div>

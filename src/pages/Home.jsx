@@ -50,6 +50,11 @@ const myAnimations = [
     description: "Create a circle using GSAP.",
     path: "/circle",
   },
+  {
+    title: "Stagger Test",
+    description: "Test stagger effect with GSAP.",
+    path: "/staggermanytest",
+  },
 ];
 
 const Home = () => {

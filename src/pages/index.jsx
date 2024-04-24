@@ -7,6 +7,7 @@ import GsapTimeline from "./GsapTimeline";
 import GsapScrollTrigger from "./GsapScrollTrigger";
 import GsapText from "./GsapText";
 import Circle from "./CircleShape.jsx";
+import StagerManyTest from "./StaggerTest.jsx";
 
 export {
   GsapTo,
@@ -18,4 +19,5 @@ export {
   GsapStagger,
   GsapText,
   Circle,
+  StagerManyTest,
 };
